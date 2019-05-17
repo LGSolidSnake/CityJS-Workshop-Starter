@@ -88,6 +88,10 @@ export default {
         handleWin() {
             this.locked = true;
         },
+        modeSwitch() {
+            this.resetGame()
+            this.mode = this.mode === "2Player" ? "ai" : "2Player";
+        },
         resetGame() {
             this.game = uuid();
             this.locked = false;
